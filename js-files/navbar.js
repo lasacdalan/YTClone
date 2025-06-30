@@ -1,7 +1,7 @@
 const burgerNavbar = document.getElementById('burger-navbar');
 const mainVideo = document.getElementById('main-video');
 const navbar = document.getElementById('navbar');
-const menuBar = document.getElementById('menu-bar');
+const menuWrapper = document.getElementById('menu-wrapper');
 
 function navbarDisplay() {
 	if (navbar.style.display === 'none') {
@@ -9,12 +9,12 @@ function navbarDisplay() {
 		mainVideo.style.width = '80%';
 		mainVideo.style.left = '270px';
 		mainVideo.style.height = '80%';
-		menuBar.style.marginLeft = '250px';
+		menuWrapper.style.marginLeft = '170px';
 	} else {
 		navbar.style.display = 'none';
 		mainVideo.style.width = '92%';
 		mainVideo.style.left = '105px';
 		mainVideo.style.height = '100%';
-		menuBar.style.marginLeft = '90px';
+		menuWrapper.style.marginLeft = '-0px';
 	}
 }

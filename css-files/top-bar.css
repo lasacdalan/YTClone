@@ -3,7 +3,7 @@
 	justify-content: start;
 	padding: 20px;
 	height: 70px;
-	width: 100%;
+	width: 98%;
 	right: 0;
 	align-items: center;
 	background-color: #fff;
@@ -227,87 +227,95 @@ h1 {
 }
 
 /**********MENU BAR***********/
-.menu-bar-container {
-	position: relative;
+.menu-wrapper {
+	position: fixed;
+	top: 65px;
+	left: 75px;
+	width: 94%;
 	display: flex;
 	align-items: center;
-	width: 100%;
-	margin-top: 65px;
-	margin-left: 10px;
-}
-
-.prev,
-.next {
-	position: absolute;
-
 	z-index: 1000;
 	background-color: white;
-	border-radius: 50%;
-
-	bottom: -50px;
-}
-
-.prev {
-	left: 100px;
-	opacity: 0;
-}
-
-.next {
-	right: 20px;
-}
-
-.prev #menu-previous,
-.next #menu-next {
-	background-color: white;
-	border-radius: 50%;
-	width: 38px;
-	height: 38px;
-	border: none;
-}
-
-#menu-previous:hover,
-#menu-next:hover {
-	background-color: rgb(149, 149, 149, 0.3);
+	right: 300px;
 }
 
 .menu-bar {
-	margin-left: 75px;
-	margin-top: 65px;
-	padding: 30px;
-	padding-right: 30px;
-
-	height: 25px;
-	width: 100dvw;
-	background-color: white;
-
-	position: fixed;
-	z-index: 500;
-
 	display: flex;
 	align-items: center;
-
+	gap: 10px;
 	overflow-x: auto;
-	white-space: nowrap;
 	scroll-behavior: smooth;
-}
-
-.menu-bar .menu-btn {
-	font-size: 15px;
-	width: auto;
-	height: 35px;
-	padding: 2px 15px;
-	border-radius: 7px;
-	margin: 0px 5px;
+	padding: 10px;
+	background-color: white;
 	white-space: nowrap;
-
-	border: none;
-	background-color: rgb(196, 196, 196, 0.3);
-	font-weight: 600;
+	cursor: grab;
+	width: 100%;
 }
 
-/*Active*/
+.menu-bar.dragging {
+	cursor: grabbing;
+	user-select: none;
+	scroll-behavior: auto;
+}
+
+.menu-bar::-webkit-scrollbar {
+	display: none;
+}
+
+.menu-btn {
+	font-size: 15px;
+	padding: 5px 15px;
+	border-radius: 7px;
+	border: none;
+	background-color: rgba(196, 196, 196, 0.3);
+	font-weight: 600;
+	white-space: nowrap;
+}
 
 .menu-clicked {
 	background-color: black !important;
 	color: white;
+}
+
+.prev,
+.next {
+	width: 40px;
+	height: 40px;
+	background-color: white;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1001;
+}
+
+.prev {
+	left: -200px;
+}
+
+.next {
+	margin-right: 10px;
+}
+
+.prev button,
+.next button {
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+.prev {
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.3s;
+}
+
+.next {
+	opacity: 1;
+	transition: 0.3s;
+}
+
+.prev:hover,
+.next:hover {
+	background-color: gray;
 }
