@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!--CSS Files-->
+		<link rel="stylesheet" href="/css-files/general.css" />
+		<link rel="stylesheet" href="/css-files/top-bar.css" />
+		<link rel="stylesheet" href="/css-files/home-navbar.css" />
+		<link rel="stylesheet" href="/css-files/burger-navbar.css" />
+		<link rel="stylesheet" href="/css-files/main-videos.css" />
+		<!--Font Awesome-->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+		/>
+		<!--Google Fonts-->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<title>Youtube Clone</title>
+	</head>
+	<body>
+		<!--ALL-->
+
+		<div class="main-container">
+			<!--Start of main container-->
+
+			<!--Title bar-->
+			<div class="title-bar" id="title">
+				<!--Start-->
+				<div
+					class="hamburger-icon"
+					id="burger-navbar"
+					onclick="navbarDisplay()"
+				>
+					<i id="burger-img" class="fa-solid fa-bars"></i>
+				</div>
+
+				<div class="start-section">
+					<i id="youtube-img" class="fa-brands fa-youtube"></i>
+					<h1>YouTube</h1>
+					<span class="ph">PH</span>
+				</div>
+
+				<!--Center-->
+				<div class="center-section">
+					<div class="search-bar">
+						<input class="input-search" type="text" placeholder="Search" />
+						<button class="search-button">
+							<i class="fa-solid fa-magnifying-glass"></i>
+							<div class="search-tooltip">Search</div>
+						</button>
+					</div>
+
+					<div class="microphone-button">
+						<button class="mic-button">
+							<i class="fa-solid fa-microphone"></i>
+							<div class="mic-tooltip">Search with your voice</div>
+						</button>
+					</div>
+				</div>
+
+				<!--End-->
+				<div class="end-section">
+					<button class="create-button">
+						<i class="fa-solid fa-plus"></i><span>Create</span>
+					</button>
+
+					<button class="notif-button">
+						<i class="fa-regular fa-bell"></i>
+						<div class="notif-tooltip">Notifications</div>
+					</button>
+
+					<img class="profile-pic" src="/images/profiles/jisoo.jpg" alt="" />
+				</div>
+			</div>
+
+			<!--Menu bar-->
+			<div class="menu-bar-container">
+				<!-- Left Arrow -->
+				<div class="prev">
+					<button id="menu-previous">
+						<i class="fa-solid fa-less-than"></i>
+					</button>
+				</div>
+
+				<!-- Scrollable menu bar -->
+				<div class="menu-bar" id="menu-bar">
+					<button id="active" class="menu-btn menu-clicked">All</button>
+					<button class="menu-btn">Music</button>
+					<button class="menu-btn">Mixes</button>
+					<button class="menu-btn">Philippine Music</button>
+					<button class="menu-btn">Contemporary</button>
+					<button class="menu-btn">Javascript</button>
+					<button class="menu-btn">Text</button>
+					<button class="menu-btn">Indie pop music</button>
+					<button class="menu-btn">Teen pop music</button>
+					<button class="menu-btn">Taylor Swift</button>
+					<button class="menu-btn">Ariana Grande</button>
+					<button class="menu-btn">Live</button>
+					<button class="menu-btn">Data Type</button>
+				</div>
+
+				<!-- Right Arrow -->
+				<div class="next">
+					<button id="menu-next">
+						<i class="fa-solid fa-greater-than"></i>
+					</button>
+				</div>
+			</div>
+
+			<!--Home Navbar-->
+			<div class="home-navbar">
+				<div class="home-menu">
+					<i class="fa-solid fa-house"></i>
+					<p>Home</p>
+				</div>
+
+				<div class="home-menu">
+					<i class="fa-solid fa-bolt"></i>
+					<p>Shorts</p>
+				</div>
+
+				<div class="home-menu">
+					<i class="fa-solid fa-tv"></i>
+					<p>Subscriptions</p>
+				</div>
+
+				<div class="home-menu">
+					<i class="fa-regular fa-user"></i>
+					<p>You</p>
+				</div>
+			</div>
+
+			<!--Burger NavBar-->
+			<div class="navbar" id="navbar" style="display: none">
+				<div class="nav">
+					<!--First-->
+					<div class="home">
+						<button class="btns house-icon">
+							<i class="fa-solid fa-house" style="margin-right: 23px"></i>Home
+						</button>
+						<button class="btns shorts-icon">
+							<i class="fa-solid fa-bolt" style="margin-right: 23px"></i>Shorts
+						</button>
+						<button class="btns sub-icon">
+							<i class="fa-solid fa-tv" style="margin-right: 18px"></i
+							>Subscriptions
+						</button>
+					</div>
+					<!--Second-->
+					<div class="you">
+						<button class="btns" id="you-btn">You ></button>
+						<button class="btns history-icon">
+							<i
+								class="fa-solid fa-clock-rotate-left"
+								style="margin-right: 23px"
+							></i
+							>History
+						</button>
+						<button class="btns playlists-icon">
+							<i class="fa-solid fa-sliders" style="margin-right: 23px"></i
+							>Playlists
+						</button>
+						<button class="btns yourVideos-icon">
+							<i class="fa-solid fa-play" style="margin-right: 24px"></i>Your
+							videos
+						</button>
+						<button class="btns watchLater-icon">
+							<i class="fa-regular fa-clock" style="margin-right: 22px"></i
+							>Watch later
+						</button>
+						<button class="btns likedVideos-icon">
+							<i class="fa-regular fa-thumbs-up" style="margin-right: 23px"></i
+							>Liked videos
+						</button>
+					</div>
+
+					<!--Third-->
+					<div class="subscriptions">
+						<div class="sec-title">Subscriptions</div>
+						<button class="btns">
+							<img
+								src="/images/profiles/freecodeimg.jpg"
+								style="margin-right: 15px"
+							/>freeCodecamp.org
+						</button>
+						<button class="btns">
+							<img
+								src="/images/profiles/broimg.jpg"
+								style="margin-right: 15px"
+							/>Bro Code
+						</button>
+						<button class="btns">
+							<img
+								src="/images/profiles/superimg.jpg"
+								style="margin-right: 15px"
+							/>SuperSimpleDev
+						</button>
+						<button class="btns">
+							<i class="fa-solid fa-list-ul" style="margin-right: 23px"></i>All
+							subscriptions
+						</button>
+					</div>
+
+					<!--Fourth-->
+					<div class="explore">
+						<div class="sec-title">Explore</div>
+						<button class="btns ex-trending">
+							<i class="fa-solid fa-meteor" style="margin-right: 23px"></i
+							>Trending
+						</button>
+						<button class="btns ex-music">
+							<i class="fa-solid fa-music" style="margin-right: 23px"></i>Music
+						</button>
+						<button class="btns ex-movies">
+							<i class="fa-solid fa-clapperboard" style="margin-right: 23px"></i
+							>Movies
+						</button>
+						<button class="btns ex-gaming">
+							<i class="fa-solid fa-gamepad" style="margin-right: 20px"></i
+							>Gaming
+						</button>
+						<button class="btns ex-news">
+							<i class="fa-regular fa-newspaper" style="margin-right: 23px"></i
+							>News
+						</button>
+						<button class="btns ex-sports">
+							<i class="fa-solid fa-trophy" style="margin-right: 22px"></i
+							>Sports
+						</button>
+						<button class="btns ex-fashion">
+							<i class="fa-solid fa-shirt" style="margin-right: 23px"></i
+							>Fashion & Beauty
+						</button>
+					</div>
+
+					<!--Fifth-->
+					<div class="more-from-youtube">
+						<div class="sec-title">More from YouTube</div>
+						<button class="btns yt-prem">
+							<img
+								class="moreyt-img"
+								src="/images/navbar/yt-icon.png"
+								style="margin-right: 23px"
+							/>
+							YouTube Premium
+						</button>
+						<button class="btns yt-studio">
+							<img
+								class="moreyt-img"
+								src="/images/navbar/yt-studio.png"
+								style="margin-right: 23px"
+							/>YouTube Studio
+						</button>
+						<button class="btns yt-music">
+							<img
+								class="moreyt-img"
+								src="/images/navbar/yt-music.png"
+								style="margin-right: 23px"
+							/>YouTube Music
+						</button>
+						<button class="btns yt-kids">
+							<img
+								class="moreyt-img"
+								src="/images/navbar/yt-kids.png"
+								style="margin-right: 23px"
+							/>YouTube Kids
+						</button>
+					</div>
+
+					<!--Sixth-->
+					<div class="settings-section">
+						<button class="btns setting">
+							<i class="fa-solid fa-gear" style="margin-right: 23px"></i
+							>Settings
+						</button>
+						<button class="btns report-history">
+							<i class="fa-regular fa-flag" style="margin-right: 23px"></i
+							>Report History
+						</button>
+						<button class="btns help">
+							<i
+								class="fa-regular fa-circle-question"
+								style="margin-right: 23px"
+							></i
+							>Help
+						</button>
+						<button class="btns feedback">
+							<i class="fa-solid fa-message" style="margin-right: 23px"></i>Send
+							feedback
+						</button>
+					</div>
+
+					<!--Seventh-->
+					<div class="footer">
+						<span>About</span>
+						<span>Press</span>
+						<span>Copyright</span>
+						<span>Contact us</span>
+						<span>Creators</span>
+						<span>Advertise</span>
+						<span>Developers</span>
+						<br /><br />
+						<span>Terms</span>
+						<span>Privacy</span>
+						<span>Policy & Safety</span>
+						<span>How YouTube works</span><br />
+						<span>Test new features</span>
+						<br /><br />
+						<p>&copy; 2025 Google LLC</p>
+					</div>
+				</div>
+			</div>
+
+			<!--Main-Videos Section-->
+			<div class="main-video" id="main-video">
+				<!--VIDEOS-->
+				<div
+					class="video"
+					onclick="window.location.href='https://www.youtube.com/watch?v=ro3tNNE9wiw&list=RDro3tNNE9wiw&start_radio=1'"
+				>
+					<div class="top">
+						<img src="/images/videos/thumbnail-vids/thumbnail-1.jpg" />
+						<div class="video-time">5:04</div>
+					</div>
+					<div class="low">
+						<div class="creator-img">
+							<img src="/images/videos/creator-imgs/creator-1.jpg" alt="" />
+						</div>
+						<div class="description">
+							<div class="video-title">Take A Chance With Me</div>
+							<div class="creator-name">NIKI</div>
+							<div class="video-status">7.8M views &#183; 9 months ago</div>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="video"
+					onclick="window.location.href='https://www.youtube.com/watch?v=u9raS7-NisU&list=RDu9raS7-NisU&start_radio=1'"
+				>
+					<div class="top">
+						<img
+							src="/images/videos/thumbnail-vids/thumbnail-2.jpg"
+							id="thumbnail-cover"
+						/>
+						<div class="video-time">4:55</div>
+					</div>
+					<div class="low">
+						<div class="creator-img">
+							<img src="/images/videos/creator-imgs/creator-2.jpg" alt="" />
+						</div>
+						<div class="description">
+							<div class="video-title">Daylight</div>
+							<div class="creator-name">Taylor Swift</div>
+							<div class="video-status">83M views &#183; 5 years ago</div>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="video"
+					onclick="window.location.href='https://www.youtube.com/watch?v=zp8-BhMCnTA&list=RDzp8-BhMCnTA&start_radio=1'"
+				>
+					<div class="top">
+						<img
+							src="/images/videos/thumbnail-vids/thumbnail-3.jpg"
+							id="thumbnail-cover"
+						/>
+						<div class="video-time">5:09</div>
+					</div>
+					<div class="low">
+						<div class="creator-img">
+							<img src="/images/videos/creator-imgs/creator-3.jpg" alt="" />
+						</div>
+						<div class="description">
+							<div class="video-title">Ariana Grande - Honeymoon Avenue</div>
+							<div class="creator-name">Ariana Grande</div>
+							<div class="video-status">17M views &#183; 1 year ago</div>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="video"
+					onclick="window.location.href='https://www.youtube.com/watch?v=K9_VFxzCuQ0&list=RDK9_VFxzCuQ0&start_radio=1'"
+				>
+					<div class="top">
+						<img
+							src="/images/videos/thumbnail-vids/thumbnail-4.jpg"
+							id="thumbnail-cover"
+						/>
+						<div class="video-time">3:40</div>
+					</div>
+					<div class="low">
+						<div class="creator-img">
+							<img src="/images/videos/creator-imgs/creator-4.jpg" alt="" />
+						</div>
+						<div class="description">
+							<div class="video-title">ROSÉ - 'Gone' M/V</div>
+							<div class="creator-name">BLACKPINK</div>
+							<div class="video-status">324M views &#183; 4 years ago</div>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="video"
+					onclick="window.location.href='https://www.youtube.com/watch?v=oxNLRqMJMZk&list=RDoxNLRqMJMZk&start_radio=1'"
+				>
+					<div class="top">
+						<img
+							src="/images/videos/thumbnail-vids/thumbnail-7.jpg"
+							id="thumbnail-cover"
+						/>
+						<div class="video-time">3:55</div>
+					</div>
+					<div class="low">
+						<div class="creator-img">
+							<img src="/images/videos/creator-imgs/creator-2.jpg" alt="" />
+						</div>
+						<div class="description">
+							<div class="video-title">
+								Taylor Swift - Mine (Taylor's Version) (Lyric Video)
+							</div>
+							<div class="creator-name">Taylor Swift</div>
+							<div class="video-status">19M views &#183; 1 year ago</div>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="video"
+					onclick="window.location.href='https://www.youtube.com/watch?v=oiAtAzFLDfE&list=RDoiAtAzFLDfE&start_radio=1'"
+				>
+					<div class="top">
+						<img
+							src="/images/videos/thumbnail-vids/thumbnail-6.jpg"
+							id="thumbnail-cover"
+						/>
+						<div class="video-time">5:49</div>
+					</div>
+					<div class="low">
+						<div class="creator-img">
+							<img src="/images/videos/creator-imgs/creator-6.jpg" alt="" />
+						</div>
+						<div class="description">
+							<div class="video-title">
+								Tibok - Earl Agustin (Official Lyric Video)
+							</div>
+							<div class="creator-name">Earl Agustin</div>
+							<div class="video-status">31M views &#183; 2 years ago</div>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="video"
+					onclick="window.location.href='https://www.youtube.com/watch?v=Rht8rS4cR1s&list=RDRht8rS4cR1s&index=1'"
+				>
+					<div class="top">
+						<img
+							src="/images/videos/thumbnail-vids/thumbnail-5.jpg"
+							id="thumbnail-cover"
+						/>
+						<div class="video-time">4:01</div>
+					</div>
+					<div class="low">
+						<div class="creator-img">
+							<img src="/images/videos/creator-imgs/creator-5.jpg" alt="" />
+						</div>
+						<div class="description">
+							<div class="video-title">
+								Multo - Cup of Joe (Official Lyric Video)
+							</div>
+							<div class="creator-name">Cup of Joe</div>
+							<div class="video-status">53M views &#183; 9 months ago</div>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="video"
+					onclick="window.location.href='https://www.youtube.com/watch?v=DqmxvcVSOsk&list=RDDqmxvcVSOsk&start_radio=1'"
+				>
+					<div class="top">
+						<img
+							src="/images/videos/thumbnail-vids/thumbnail-8.jpg"
+							id="thumbnail-cover"
+						/>
+						<div class="video-time">3:17</div>
+					</div>
+					<div class="low">
+						<div class="creator-img">
+							<img src="/images/videos/creator-imgs/creator-8.jpg" alt="" />
+						</div>
+						<div class="description">
+							<div class="video-title">
+								Jason Dhakal - Para Sa Akin [Official Audio]
+							</div>
+							<div class="creator-name">jason dhakal</div>
+							<div class="video-status">9.6M views &#183; 1 year ago</div>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="video"
+					onclick="window.location.href='https://www.youtube.com/watch?v=9jz3fWYwMuc&list=RD9jz3fWYwMuc&start_radio=15px'"
+				>
+					<div class="top">
+						<img src="/images/videos/thumbnail-vids/thumbnail-9.jpg" />
+						<div class="video-time">2:51</div>
+					</div>
+					<div class="low">
+						<div class="creator-img">
+							<img src="/images/videos/creator-imgs/creator-1.jpg" alt="" />
+						</div>
+						<div class="description">
+							<div class="video-title">lowkey</div>
+							<div class="creator-name">NIKI</div>
+							<div class="video-status">9.9M views &#183; 1 year ago</div>
+						</div>
+					</div>
+				</div>
+
+				<!--VIDEOS-->
+			</div>
+			<!--main-video-->
+
+			<!--End of main container-->
+		</div>
+		<!--JS Files-->
+		<script src="/js-files/general.js"></script>
+		<script src="/js-files/top-bar.js"></script>
+		<script src="/js-files/navbar.js"></script>
+	</body>
+</html>

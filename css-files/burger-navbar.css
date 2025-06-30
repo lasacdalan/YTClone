@@ -1,0 +1,106 @@
+.navbar {
+	width: 230px;
+	top: 60px;
+	height: calc(100dvh - 60px);
+	display: flex;
+	flex-direction: column;
+	z-index: 1000;
+	position: fixed;
+	top: 60px;
+	left: 0;
+	overflow-y: auto;
+	background-color: white;
+	padding-left: 3px;
+}
+
+.nav {
+	width: 100%;
+}
+
+.nav h4 {
+	margin-left: 15px;
+	margin-bottom: 8px;
+}
+
+.navbar .home,
+.you,
+.subscriptions,
+.explore,
+.more-from-youtube,
+.settings-section {
+	background-color: #fff;
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	border-bottom: solid 1px rgb(128, 128, 128, 0.3);
+	padding: 10px;
+}
+
+.btns {
+	background: none;
+	border: none;
+	padding: 0px 12px;
+	transition: 0.1s ease;
+	border-radius: 12px;
+	font-size: 15px;
+	margin: 0px 7px;
+	height: 45px;
+	width: 190px;
+
+	display: flex;
+	align-items: center;
+}
+
+#you-btn {
+	text-align: left;
+	font-size: 17px;
+	font-weight: 600;
+}
+
+.btns:hover {
+	background-color: #e6e6e6;
+}
+
+.subscriptions img {
+	height: 22px;
+	width: 22px;
+	border-radius: 50%;
+}
+
+.sec-title {
+	font: 15px;
+	margin: 10px 20px;
+	font-size: 17px;
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+/**/
+.more-from-youtube img {
+	width: 20px;
+	height: 20px;
+}
+
+.youtube-img {
+	font-size: 6px;
+}
+
+/*FOOTER*/
+
+.footer {
+	padding: 10px;
+	padding-left: 5px;
+	margin-left: 18px;
+}
+
+.footer span {
+	cursor: pointer;
+	font-size: 13px;
+	color: rgb(90, 90, 90);
+	font-weight: bold;
+}
+
+.footer p {
+	font-size: 12px;
+	color: gray;
+}
