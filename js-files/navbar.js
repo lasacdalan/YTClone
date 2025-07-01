@@ -10,11 +10,13 @@ function navbarDisplay() {
 		mainVideo.style.left = '270px';
 		mainVideo.style.height = '80%';
 		menuWrapper.style.marginLeft = '170px';
+		menuWrapper.style.width = '80%';
 	} else {
 		navbar.style.display = 'none';
 		mainVideo.style.width = '92%';
 		mainVideo.style.left = '105px';
 		mainVideo.style.height = '100%';
 		menuWrapper.style.marginLeft = '-0px';
+		menuWrapper.style.width = '91%';
 	}
 }

@@ -230,8 +230,8 @@ h1 {
 .menu-wrapper {
 	position: fixed;
 	top: 65px;
-	left: 75px;
-	width: 94%;
+	left: 105px;
+	width: 91%;
 	display: flex;
 	align-items: center;
 	z-index: 1000;
@@ -286,15 +286,23 @@ h1 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	z-index: 1001;
+	z-index: 1000;
+
+	position: fixed;
 }
 
 .prev {
-	left: -200px;
+	left: 100px;
+
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.3s;
 }
 
 .next {
-	margin-right: 10px;
+	right: 15px;
+	opacity: 1;
+	transition: 0.3s;
 }
 
 .prev button,
@@ -302,17 +310,6 @@ h1 {
 	border: none;
 	background: none;
 	cursor: pointer;
-}
-
-.prev {
-	opacity: 0;
-	pointer-events: none;
-	transition: 0.3s;
-}
-
-.next {
-	opacity: 1;
-	transition: 0.3s;
 }
 
 .prev:hover,
