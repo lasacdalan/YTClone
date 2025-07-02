@@ -42,7 +42,7 @@ rightArrow.addEventListener('click', () => {
 // Drag scroll
 const dragging = (e) => {
 	if (!isDragging) return;
-	tabsBox.scrollLeft -= e.movementX;
+	tabsBox.scrollLeft -= e.movementX * 10;
 	handleIcons();
 };
 
