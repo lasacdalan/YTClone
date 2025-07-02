@@ -151,6 +151,7 @@ h1 {
 .mic-button:hover .mic-tooltip,
 .notif-button:hover .notif-tooltip {
 	opacity: 1;
+	z-index: 2000;
 }
 
 .notif-button:hover,
@@ -234,7 +235,6 @@ h1 {
 	width: 91%;
 	display: flex;
 	align-items: center;
-	z-index: 1000;
 	background-color: white;
 	right: 300px;
 }
