@@ -1,24 +1,22 @@
 .title-bar {
 	display: flex;
-	justify-content: start;
-	padding: 20px;
-	height: 70px;
-	width: 98%;
-	right: 0;
+	justify-content: space-between;
 	align-items: center;
+	padding: 8px 16px;
 	background-color: #fff;
 	position: fixed;
-	left: 0;
-	z-index: 1000;
+	width: 98%;
+	height: 70px;
+	top: 0;
+	z-index: 999;
 }
 
-/*Start Section*/
-
+/* Start Section */
 .hamburger-icon {
 	border: none;
 	background: none;
 	cursor: pointer;
-	margin-left: 10px;
+	margin-left: 20px;
 }
 
 .hamburger-icon i {
@@ -28,8 +26,8 @@
 .start-section {
 	display: flex;
 	align-items: center;
-	margin-left: 35px;
-	width: 120px;
+	margin-left: 10px; /* reduced for responsiveness */
+	width: auto; /* allow shrinking */
 	cursor: pointer;
 }
 
@@ -58,14 +56,15 @@ h1 {
 	margin-bottom: 20px;
 }
 
-/*Center Section*/
-
+/* Center Section */
 .center-section {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	margin-left: 200px;
+	margin-left: 0; /* removed for responsiveness */
+	flex: 1;
+	min-width: 0;
 }
 
 .search-bar {
@@ -74,16 +73,21 @@ h1 {
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	flex: 1;
+	min-width: 0;
 }
 
 .input-search {
 	font-size: 17px;
 	height: 44px;
-	width: 595px;
+	width: 100%; /* changed from fixed 595px */
+	max-width: 595px;
+	min-width: 0px; /* allow shrinking */
 	padding-left: 15px;
 	border-bottom-left-radius: 50px;
 	border-top-left-radius: 50px;
 	border: rgb(214, 213, 213) 0.5px solid;
+	flex: 1;
 }
 
 .search-button {
@@ -181,14 +185,14 @@ h1 {
 	transition: opacity ease 0.3s;
 }
 
-/*End Section*/
-
+/* End Section */
 .end-section {
-	width: 260px;
+	width: auto; /* changed from 260px */
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	margin-left: 140px;
+	margin-left: 20px; /* reduced from 100px */
+	flex-shrink: 0;
 }
 
 .create-button {
@@ -223,11 +227,10 @@ h1 {
 	border: none;
 	border-radius: 50%;
 	margin-left: 25px;
-
 	cursor: pointer;
 }
 
-/**********MENU BAR***********/
+/********** MENU BAR ***********/
 .menu-wrapper {
 	position: fixed;
 	top: 65px;
@@ -237,7 +240,6 @@ h1 {
 	align-items: center;
 	background-color: white;
 	right: 300px;
-	position: fixed;
 	z-index: 500;
 }
 
@@ -289,13 +291,11 @@ h1 {
 	align-items: center;
 	justify-content: center;
 	z-index: 1000;
-
 	position: fixed;
 }
 
 .prev {
 	left: 100px;
-
 	opacity: 0;
 	pointer-events: none;
 	transition: 0.3s;
