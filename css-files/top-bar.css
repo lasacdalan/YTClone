@@ -237,6 +237,8 @@ h1 {
 	align-items: center;
 	background-color: white;
 	right: 300px;
+	position: fixed;
+	z-index: 500;
 }
 
 .menu-bar {
