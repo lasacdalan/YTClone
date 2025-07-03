@@ -101,3 +101,6 @@
 .video-status {
 	color: rgb(89, 88, 88);
 }
+
+@media (max-width: 600px) {
+}
