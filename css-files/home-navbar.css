@@ -13,6 +13,7 @@
 	z-index: 1000;
 	height: calc(100vh - 70px); /* fill below the top-bar */
 	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 /* Home menu items */
